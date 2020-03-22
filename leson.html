@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html land="en">
+
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+<script  src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+
+<head>
+	<style type="text/css">
+		.tab-content {
+			padding-top: 15px;
+		}
+		.col-xs-4{
+			padding: 0;
+			padding-right: 15px;
+		}
+		.haventPad{
+			padding-right: 0;
+		}
+		
+  
+  </style>
+
+ <meta charset="utf-8"> 
+ 
+ 
+</head>
+<body>
+<div class="container">
+		<div class="page-header">
+			<h1>Task list for the scary Friday</h1>
+		</div>
+
+		<div class="text-right">
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAddTask"><i class="glyphicon glyphicon-plus"></i> Add new task</button>
+		</div>
+
+		<ul class="nav nav-tabs" role="tablist">
+			<li class="active"><a href="#todo" data-toggle="tab">To do</a></li>
+			<li><a href="#inprogress" data-toggle="tab">In progress</a></li>
+			<li><a href="#done" data-toggle="tab">Done</a></li>
+		</ul>
+
+		<div class="tab-content" id="tasks-list">
+			<div role="tabpanel" class="tab-pane active" id="todo">
+				<ul class="list-group" data-status="1"></ul>
+			</div>
+
+			<div role="tabpanel" class="tab-pane" id="inprogress">
+				<ul class="list-group" data-status="2"></ul>
+			</div>
+
+			<div role="tabpanel" class="tab-pane" id="done">
+				<ul class="list-group" data-status="3"></ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="modalAddTask" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title">Add task</h4>
+				</div>
+
+				<div class="modal-body">
+					<form id="formAddTask">
+						<div class="form-group">
+							<input type="text" name="title" placeholder="Title" autofocus="true" class="form-control" autocomplete="off">
+						</div>
+					</form>
+				</div>
+
+				<div class="modal-footer">
+					<button class="btn btn-danger" data-dismiss="modal">Cancel</button>
+					<button class="btn btn-success" form="formAddTask">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modalEditTask" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title">Edit task</h4>
+				</div>
+
+				<div class="modal-body">
+					<form id="formEditTask">
+						<input type="hidden" name="id">
+
+						<div class="form-group">
+							<input type="text" name="title" placeholder="Title" autofocus="true" class="form-control" autocomplete="off">
+						</div>
+						<div class="form-group">
+							<select name="status" class="form-control">
+								<option value="1">To do</option>
+								<option value="2">In progress</option>
+								<option value="3">Done</option>
+							</select>
+						</div>
+					</form>
+				</div>
+
+				<div class="modal-footer">
+					<button class="btn btn-danger" data-dismiss="modal">Cancel</button>
+					<button class="btn btn-success" form="formEditTask">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src="script.js"></script>
+<script src="script1.js"></script>
+</body>
+</html> 

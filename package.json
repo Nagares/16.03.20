@@ -1,0 +1,17 @@
+{
+  "name": "leson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.4.1",
+    "datetimepicker": "^0.1.39",
+    "jquery": "^3.4.1",
+    "moment": "^2.24.0"
+  }
+}
