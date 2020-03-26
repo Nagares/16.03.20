@@ -2,10 +2,8 @@
 <html land="en">
 
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
-
 <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-<script  src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+<link rel="stylesheet" href="node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
 
 
 <head>
@@ -20,6 +18,10 @@
 		.haventPad{
 			padding-right: 0;
 		}
+		
+
+		
+		
 		
   
   </style>
@@ -75,6 +77,18 @@
 						<div class="form-group">
 							<input type="text" name="title" placeholder="Title" autofocus="true" class="form-control" autocomplete="off">
 						</div>
+						<div class="form-group">
+							<div class="input-group date" data-provide="datepicker">
+							   	<input type="text" name="date" class="form-control" placeholder="Date">
+								<div class="input-group-addon">
+							   		<span class="glyphicon glyphicon-th"></span>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<textarea class="form-control" name="text" rows="3"></textarea>
+						</div>
+						
 					</form>
 				</div>
 
@@ -110,6 +124,17 @@
 								<option value="3">Done</option>
 							</select>
 						</div>
+						<div class="form-group">
+							<div class="input-group date" data-provide="datepicker">
+							   	<input type="text" name="date" class="form-control" placeholder="Date">
+								<div class="input-group-addon">
+							   		<span class="glyphicon glyphicon-th"></span>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<textarea class="form-control" name="text" rows="3"></textarea>
+						</div>
 					</form>
 				</div>
 
@@ -121,7 +146,11 @@
 		</div>
 	</div>
 
+<script src="node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script  src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="script.js"></script>
 <script src="script1.js"></script>
 </body>
 </html> 
+
+

@@ -18,3 +18,25 @@ function addTask(id, task) {
 		.find(`[data-status="${task.status}"]`)
 		.append($taskItem);
 }
+
+function addInfo(parent, task) {
+	const $btnExit = $('<div>')
+						.addClass('btn btn-xs btn-exit pull-right')
+						.html('<i class="glyphicon glyphicon-menu-up"></i>');
+
+	const $divDate = $('<div>')
+						.addClass('exitInfo')
+						.text(task.date);
+				
+
+	const $divText = $('<div>')
+						.addClass('exitInfo')
+						.text(task.text)
+						.append($btnExit);
+						
+	parent	
+		    .append($divDate)
+			.append($divText);
+
+
+}
